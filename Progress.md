@@ -5,17 +5,15 @@ George:
 3. CUDA code for part 2: not implement yet
 
 Sam: 
-1. collaborate with Tom on Selective & FC section
-2. documentation
-2. Test functions
+1. Selective KVRC + FC
+2. KVRC documentation
+3. Write test cases
 
 Tom:
-1. Selective & FC section
-2. documentation
-
-
+1. Selective KVRC + FC
+2. FC documentation
+3. Run test cases
 
 2025 07 25 Meeting:
 George: Base on the documentation, write CUDA code that can run part 1 of the controller, and run it on autoDL to test the functionility or run it on a CUDA simulator to test the functionility.
-
 Sam & Tom: complete the interface document for selective & FC section, Improve the feasibility of selective & FC code. If able to complete the code in time, test it on autoDL server or local graphic card.
