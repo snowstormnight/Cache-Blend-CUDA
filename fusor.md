@@ -27,7 +27,7 @@ This component merges multiple pre-computed KV caches from different text chunks
 
 #### Identify HKVD Tokens
 
-Select tokens with the highest KV deviation by comparing pre-computed KV values with layer-wise heuristics or prior layer HKVD selections. This function ensures sparsity (typically ≤15% of tokens) to minimize recomputation cost.
+Select tokens with the highest KV deviation by comparing pre-computed KV values with layer-wise heuristics or prior layer HKVD selections. This function ensures sparsity (typically less than or equal to 15% of tokens) to minimize recomputation cost.
 
 #### Layer-Wise Fusion
 
@@ -44,7 +44,7 @@ Overlaps KV cache loading for layer *i+1* with recomputation for layer *i* using
 
 #### Attention Deviation Monitoring
 
-Computes the attention deviation (Δattn) between fused KV and full prefill for quality assurance. If deviation exceeds thresholds, the recompute ratio can be dynamically increased.
+Computes the attention deviation between fused KV and full prefill for quality assurance. If deviation exceeds thresholds, the recompute ratio can be dynamically increased.
 
 ---
 
@@ -52,14 +52,14 @@ Computes the attention deviation (Δattn) between fused KV and full prefill for 
 
 ### Description
 
-This component manages the persistent storage and retrieval of KV caches across requests. It splits inputs into chunks, hashes each chunk for efficient lookup, retrieves KV caches from the appropriate storage tier (GPU, CPU RAM, SSD), and updates the cache store with newly generated KV caches.
+This component manages the persistent storage and retrieval of KV caches across requests. It splits inputs into chunks, hashes each chunk for efficient lookup, retrieves KV caches from the appropriate storage tier, and updates the cache store with newly generated KV caches.
 
 ### Input Description
 
 * **Chunked Input Texts**: List of text chunks produced by the retrieval or chunking layer.
 * **Storage Hierarchy**: A prioritized list of storage tiers (GPU memory, CPU RAM, SSD) along with their bandwidth, latency, and capacity.
 * **KV Cache Hash Map**: A hash table mapping chunk hashes to stored KV cache locations.
-* **Eviction Policy**: Policy for freeing storage (e.g., Least Recently Used - LRU).
+* **Eviction Policy**: Policy for freeing storage (e.g., Least Recently Used).
 * **Device Constraints**: Available GPU memory and background I/O bandwidth for cache transfers.
 
 ### Output Description
