@@ -15,3 +15,9 @@ Tom:
 2025 07 25 Meeting:
 George: Base on the documentation, write CUDA code that can run part 1 of the controller, and run it on autoDL to test the functionility or run it on a CUDA simulator to test the functionility.
 Sam & Tom: complete the interface document for selective & FC section, Improve the feasibility of selective & FC code. If able to complete the code in time, test it on autoDL server or local graphic card.
+
+
+2025 08 04 Meeting:
+Sam: test plan1: write test functions where fixing one variable and test the other variables, and then compare the result with the expected result.
+     test plan2: print the status during inference, and compare the result with the expected result.
+
