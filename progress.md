@@ -6,13 +6,11 @@ George:
 
 Sam: 
 1. Selective KVRC + FC
-2. KVRC documentation
-3. Write test cases
+3. Test cases
 
 Tom:
 1. Selective KVRC + FC
-2. FC documentation
-3. Run test cases
+2. Documentation
 
 2025 07 25 Meeting:
 George: Base on the documentation, write CUDA code that can run part 1 of the controller, and run it on autoDL to test the functionility or run it on a CUDA simulator to test the functionility.
