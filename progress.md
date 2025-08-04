@@ -1,8 +1,8 @@
 Overall goal:
 George:
 1. Controller documentation (Done)
-2. CUDA code for part 1: roughly ran on CPU to check that the basic logic is correct with directly input, no actual LLM run on it yet
-3. CUDA code for part 2: not implement yet
+2. CPP code for part 1: roughly ran on CPU to check that the basic logic is correct with directly input, no actual LLM run on it yet
+3. CPP code for part 2: roughly implemented
 
 Sam: 
 1. Selective KVRC + FC
@@ -20,4 +20,5 @@ Sam & Tom: complete the interface document for selective & FC section, Improve t
 2025 08 04 Meeting:
 Sam: test plan1: write test functions where fixing one variable and test the other variables, and then compare the result with the expected result.
      test plan2: print the status during inference, and compare the result with the expected result.
+George: Start to implement an actual model and allow for layer by layer value retrive to enable selective recompute(for now, randomly recompute), then try to plug the cpp code above into the layer to check whether the recomputing time is included in the data movement time.
 
