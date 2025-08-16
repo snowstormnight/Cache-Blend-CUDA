@@ -1,3 +1,4 @@
 # JetBrains IDEs (IntelliJ, PyCharm, CLion, etc.)
 .idea/
 *.iml
+.DS_Store
